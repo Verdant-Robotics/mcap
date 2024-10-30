@@ -654,6 +654,14 @@ Status McapWriter::write(const Metadata& metadata) {
   return StatusCode::Success;
 }
 
+Timestamp McapWriter::currentChunkStart() const {
+  return currentChunkStart_;
+}
+
+Timestamp McapWriter::currentChunkEnd() const {
+  return currentChunkEnd_;
+}
+
 const Statistics& McapWriter::statistics() const {
   return statistics_;
 }
